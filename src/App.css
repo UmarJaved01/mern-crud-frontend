@@ -1,0 +1,70 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-container {
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.list-container {
+  margin-top: 20px;
+}
+
+.person-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.person-card button {
+  background-color: #dc3545;
+}
+
+.person-card button:hover {
+  background-color: #c82333;
+}
+
+.person-card input {
+  margin-right: 10px;
+  width: 100px;
+}
+
+.person-card div {
+  display: flex;
+  gap: 5px;
+}
