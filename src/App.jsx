@@ -8,7 +8,7 @@ function App() {
   const [persons, setPersons] = useState([])
 
   const fetchPersons = async () => {
-    const response = await axios.get('http://localhost:5000/api/persons')
+    const response = await axios.get('mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons')
     setPersons(response.data)
   }
 
