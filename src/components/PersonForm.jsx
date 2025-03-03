@@ -7,7 +7,7 @@ function PersonForm({ fetchPersons }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons', { name, age })
+    await axios.post('https://mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons', { name, age })
     setName('')
     setAge('')
     fetchPersons()

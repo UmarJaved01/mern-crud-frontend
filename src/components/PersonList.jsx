@@ -8,7 +8,7 @@ function PersonList({ persons, fetchPersons }) {
 
   const deletePerson = async (id) => {
     try {
-      await axios.delete(`mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons/${id}`)
+      await axios.delete(`https://mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons/${id}`)
       fetchPersons()
     } catch (error) {
       console.error('Error deleting person:', error)
@@ -23,7 +23,7 @@ function PersonList({ persons, fetchPersons }) {
 
   const updatePerson = async (id) => {
     try {
-      const response = await axios.put(`mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons/${id}`, {
+      const response = await axios.put(`https://mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons/${id}`, {
         name: editName,
         age: parseInt(editAge)
       })
