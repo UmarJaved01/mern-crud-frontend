@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import config from '../config' 
 
 function PersonForm({ fetchPersons }) {
   const [name, setName] = useState('')
@@ -7,7 +8,7 @@ function PersonForm({ fetchPersons }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('https://mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons', { name, age })
+    await axios.post(config.apiBaseUrl, { name, age })
     setName('')
     setAge('')
     fetchPersons()
