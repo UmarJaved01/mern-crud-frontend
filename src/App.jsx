@@ -3,14 +3,13 @@ import axios from 'axios'
 import PersonForm from './components/PersonForm'
 import PersonList from './components/PersonList'
 import './App.css'
-import config from './config'
 
 function App() {
   const [persons, setPersons] = useState([])
 
   const fetchPersons = async () => {
     try {
-      const response = await axios.get(config.apiBaseUrl)
+      const response = await axios.get('https://mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons')
       setPersons(response.data)
     } catch (error) {
       console.error('Error fetching persons:', error)

@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { useState } from 'react'
-import config from '../config'
 
 function PersonList({ persons, fetchPersons }) {
   const [editingId, setEditingId] = useState(null)
@@ -9,7 +8,7 @@ function PersonList({ persons, fetchPersons }) {
 
   const deletePerson = async (id) => {
     try {
-      await axios.delete(`${config.apiBaseUrl}/${id}`)
+      await axios.delete(`https://mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons/${id}`)
       fetchPersons()
     } catch (error) {
       console.error('Error deleting person:', error)
@@ -24,7 +23,7 @@ function PersonList({ persons, fetchPersons }) {
 
   const updatePerson = async (id) => {
     try {
-      const response = await axios.put(`${config.apiBaseUrl}/${id}`, {
+      const response = await axios.put(`https://mern-crud-backend-cjbjgcbjbgd5czdu.southeastasia-01.azurewebsites.net/api/persons/${id}`, {
         name: editName,
         age: parseInt(editAge)
       })
