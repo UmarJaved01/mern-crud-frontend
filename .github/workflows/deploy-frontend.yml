@@ -40,7 +40,7 @@ jobs:
         inlineScript: |
           az storage blob upload-batch --account-name merncrudfrontend --auth-mode login --source ./dist --destination '$web' --overwrite
       env:
-        AZURE_STORAGE_ACCOUNT: merncrudfrontend 
+        AZURE_STORAGE_ACCOUNT: merncrudfrontend # Optional: Explicitly set for clarity
 
     - name: Logout from Azure
       run: az logout
